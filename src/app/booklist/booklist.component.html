@@ -1,0 +1,33 @@
+<h1> Booklist component page </h1>
+<p class="p">{{title}}</p>
+
+<button [disabled]="!isdisbled">Property Binding</button> //disabled attribute is set to true using property binding
+<br>
+<br>
+<button (click)="onClick()">Event Binding</button> // check console log for event binding output
+<br>
+<br>
+
+
+<input type="text" [(ngModel)]="input"> //two way binding with ngModel
+<p>{{input}}</p>
+
+<br>
+<br>
+<p>Price: {{a | currency:'USD'}} // currency pipe to show price in USD</p>
+<br>
+<br>
+
+
+<h2>BookList</h2>
+<button (click)="show = !show">{{show ? 'Hide Button' : 'Show button'}}</button> // ngIf directive to show booklist
+
+<Ul *ngIf="show">
+    <li *ngFor="let books of booklist; index as i ">
+        <img [src]="books.b_image" alt="book image">
+        <p>{{books.b_title}} by {{books.b_author}} </p>
+        <p>Price :{{books.b_price}}</p>
+        <p>Available :{{ books.b_isAvailable}}</p>
+    </li>
+
+</Ul>
