@@ -6,11 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BooklistComponent } from './booklist/booklist.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BookComponent } from './book/book.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BooklistComponent
+    BooklistComponent,
+    BookComponent
   ],
   imports: [
     BrowserModule,
