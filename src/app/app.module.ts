@@ -7,11 +7,12 @@ import { AppComponent } from './app.component';
 import { BooklistComponent } from './booklist/booklist.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BookComponent } from './book/book.component';
-import { BooklistModule } from './booklist/booklist.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BooklistComponent,
+    BookComponent
   ],
   imports: [
     BrowserModule,

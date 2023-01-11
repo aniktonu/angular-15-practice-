@@ -21,10 +21,13 @@
 
 <h2>BookList</h2>
 <button (click)="show = !show">{{show ? 'Hide Button' : 'Show button'}}</button> // ngIf directive to show booklist
-<br>
-// ngFor directive to show booklist
+
 <Ul *ngIf="show">
-    <ng-container *ngFor="let books of booklist; index as i ">
-        <app-book (addTocardEvent)="addToCard($event)" [book]="books" [index]="i"></app-book>
-    </ng-container>
+    <li *ngFor="let books of booklist; index as i ">
+        <img [src]="books.b_image" alt="book image">
+        <p>{{books.b_title}} by {{books.b_author}} </p>
+        <p>Price :{{books.b_price}}</p>
+        <p>Available :{{ books.b_isAvailable}}</p>
+    </li>
+
 </Ul>
