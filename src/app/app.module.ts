@@ -16,8 +16,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    NgbModule,
-    BooklistModule
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
